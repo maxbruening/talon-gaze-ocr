@@ -49,7 +49,7 @@ setting_ocr_use_talon_backend = mod.setting(
 setting_ocr_connect_tracker = mod.setting(
     "ocr_connect_tracker",
     type=bool,
-    default=True,
+    default=False,
     desc="If true, automatically connect the eye tracker at startup.",
 )
 setting_ocr_logging_dir = mod.setting(

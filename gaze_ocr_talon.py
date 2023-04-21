@@ -55,7 +55,8 @@ setting_ocr_connect_tracker = mod.setting(
 setting_ocr_logging_dir = mod.setting(
     "ocr_logging_dir",
     type=str,
-    default=None,
+    #default=None,
+    default="C:/Users/maxbr/AppData/Roaming/talon/gaze-ocr",
     desc="If specified, log OCR'ed images to this directory.",
 )
 setting_ocr_click_offset_right = mod.setting(

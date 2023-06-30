@@ -56,7 +56,7 @@ setting_ocr_logging_dir = mod.setting(
     "ocr_logging_dir",
     type=str,
     #default=None,
-    default="C:/Users/maxbr/Documents/7 RSI computer/my Talon help/gaze ocr logs",
+    default="C:/Users/maxbr/Documents/7 accessibility and health/my Talon help/gaze ocr logs",
     desc="If specified, log OCR'ed images to this directory.",
 )
 setting_ocr_click_offset_right = mod.setting(

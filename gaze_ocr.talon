@@ -53,8 +53,9 @@ mode: user.dictation_command
     user.mouse_scroll_right(0.5)
 
 # Debugging commands.
-ocr show [text]: user.show_ocr_overlay("text", 1)
-ocr show boxes: user.show_ocr_overlay("boxes", 1)
+ocr show [text]: user.show_ocr_overlay("text")
+ocr show [text] near <user.timestamped_prose>: user.show_ocr_overlay("text", timestamped_prose)
+ocr show boxes: user.show_ocr_overlay("boxes")
 
 # Commands that operate on text nearby where you're looking.
 # Example: "hover seen apple" to hover the cursor over the word "apple".
@@ -94,8 +95,10 @@ replace [{user.ocr_modifiers}] [seen | scene] <user.prose_range> with <user.pros
     user.insert_adjacent_to_text(timestamped_prose, "before", prose)
 [go] after <user.timestamped_prose> say <user.prose>$:
     user.insert_adjacent_to_text(timestamped_prose, "after", prose)
-phones (seen | scene) <user.timestamped_prose>$:
+phones [word] (seen | scene) <user.timestamped_prose>$:
     user.change_text_homophone(timestamped_prose)
 
 ocr tracker on: user.connect_ocr_eye_tracker()
 ocr tracker off: user.disconnect_ocr_eye_tracker()
+
+# More commands are available for Talon Beta users! Simply switch to the "beta" branch.
